@@ -1,0 +1,26 @@
+name: Brand Openedx Dev Deploy
+
+on:
+  push:
+    branches:
+      - main
+  
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Connect to EC2 and deploy
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            # cd ~/lexconx/brand-openedx
+            # git pull
+            echo "Deploying Brand Openedx..."
+            # cd ..
+            # source py-venv/bin/activate
