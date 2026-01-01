@@ -22,7 +22,7 @@ jobs:
             cd ~/lexconx
             source py-venv/bin/activate
             echo "Building MFE..."
-            tutor images build mfe   
+            tutor images build mfe --no-cache 
             echo "Rebooting MFE..."
             tutor local reboot -d mfe
             echo "Brand deployed successfully."
