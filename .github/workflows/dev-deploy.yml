@@ -18,7 +18,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          command_timeout: 30m0s
+          command_timeout: 80m0s
           script: |
             cd ~/lexconx/plugins/custom_brand_openedx
             ./latest_commit_rebuild.sh
