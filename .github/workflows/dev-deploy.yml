@@ -20,10 +20,5 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           command_timeout: 30m0s
           script: |
-            cd ~/lexconx
-            source py-venv/bin/activate
-            echo "Building MFE..."
-            tutor images build mfe --no-cache 
-            echo "Rebooting MFE..."
-            tutor local reboot -d mfe
-            echo "Brand deployed successfully."
+            cd ~/lexconx/plugins/custom_brand_openedx
+            ./latest_commit_rebuild.sh
