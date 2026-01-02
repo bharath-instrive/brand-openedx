@@ -10,7 +10,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 180
     steps:
       - name: Connect to EC2 and deploy
         uses: appleboy/ssh-action@v0.1.10
@@ -18,7 +18,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          command_timeout: 80m0s
+          command_timeout: 180m0s
           script: |
             cd ~/lexconx/plugins/custom_brand_openedx
-            ./latest_commit_rebuild.sh
+            ./latest_commit_rebuild.sh > ~/lexconx/deploy.log 2>&1 &
