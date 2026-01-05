@@ -21,4 +21,4 @@ jobs:
           command_timeout: 180m0s
           script: |
             cd ~/lexconx/plugins/custom_brand_openedx
-            ./latest_commit_rebuild.sh > ~/lexconx/deploy.log 2>&1 &
+            ./latest_commit_rebuild.sh
