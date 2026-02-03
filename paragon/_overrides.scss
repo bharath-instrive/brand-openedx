@@ -5,3 +5,78 @@
   --pgn-color-primary-500: #E75E28;
   --pgn-color-primary-base: #E75E28;
 }
+
+
+/* =========================
+   NAV LINKS
+   ========================= */
+
+/* Base nav-link setup */
+.site-header-desktop .nav-link {
+  position: relative;
+  background-color: transparent;
+  color: inherit;
+  font-size:14px;
+  font-weight:500;
+  transition: font-size 0.15s ease;
+
+}
+
+/* Hover + Active styles */
+.site-header-desktop .nav-link:hover,
+.site-header-desktop .nav-link.active {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+/* Lifted underline */
+.site-header-desktop .nav-link:hover::after,
+.site-header-desktop .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 0px; /* 👈 space from header bottom */
+  height: 2px;
+  border-radius:12px ;
+  background-color: #E75E28;
+}
+
+
+/* Account menu button styling */
+.site-header-desktop button.menu-trigger.btn.btn-outline-primary {
+  padding: 9px 15px !important;
+  background-color: #F2F7F8 !important;
+  color: #E75E28 !important;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  border: none !important;
+  border-radius: 6px;
+  margin: 12px 0;
+  box-shadow: none !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hide ONLY avatar */
+.site-header-desktop .menu-trigger .avatar {
+  display: none !important;
+}
+
+/* Keep arrow visible and spaced correctly */
+.site-header-desktop .menu-trigger svg:last-child {
+  margin-left: 6px;
+}
+
+/* Remove default hover/focus borders */
+.site-header-desktop button.menu-trigger:hover,
+.site-header-desktop button.menu-trigger:focus,
+.site-header-desktop button.menu-trigger:active {
+  background-color: #F2F7F8 !important;
+  color: #E75E28 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
