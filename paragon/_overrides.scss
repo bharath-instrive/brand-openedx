@@ -80,3 +80,64 @@
   border: none !important;
   box-shadow: none !important;
 }
+
+/* =========================
+   LEARNING HEADER
+   ========================= */
+
+/* Hide Help link */
+.learning-header a.text-gray-700 {
+  display: none !important;
+}
+
+
+/* =========================
+   LEARNING HEADER - USER BUTTON
+   ========================= */
+
+/* User dropdown button styling */
+.learning-header .user-dropdown .dropdown-toggle.btn.btn-outline-primary {
+  padding: 9px 15px !important;  /* control height & horizontal padding */
+  background-color: #F2F7F8 !important;
+  height:38px !important;
+  color: #E75E28 !important;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  border: none !important;
+  border-radius: 6px;
+  margin:5px  !important;
+  box-shadow: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0; /* remove extra vertical space */
+  position: relative; /* for arrow ::after positioning */
+}
+
+/* Hide avatar icon inside button if any */
+.learning-header .user-dropdown .dropdown-toggle .svg-inline--fa {
+  display: none !important;
+}
+
+/* Add arrow after username (if button uses ::after for arrow) */
+.learning-header .user-dropdown .dropdown-toggle::after {
+  content: ""; /* arrow symbol, you can replace with unicode or icon font */
+  margin: 10px 4px 10px 12px; /* space between username and arrow */
+  font-weight:normal !important;
+  display: inline-block;
+  vertical-align: middle;
+  justify-content:center;
+}
+
+/* Remove hover/focus/active outlines or borders */
+.learning-header .user-dropdown .dropdown-toggle:hover,
+.learning-header .user-dropdown .dropdown-toggle:focus,
+.learning-header .user-dropdown .dropdown-toggle:active,
+.learning-header .user-dropdown .dropdown-toggle:focus-visible {
+  background-color: #F2F7F8 !important;
+  color: #E75E28 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
